@@ -59,30 +59,26 @@ wss.on('connection', (ws) => {
     }
   });
 
-
-  // ws.on('notification', function incoming(notification) {
-  //   let notificationObj = JSON.parse(notification);
-  //   notificationObj.id = uuidv4();
-
-  //   wss.clients.forEach(function each(client){
-  //     client.send(JSON.stringify(notificationObj));
-  //   })
-  // });
-
-
-  // ws.on('joinChannel', function incoming(joinChan) {
-
-  //   let joinObj = JSON.parse(joinChan);
-  //   joinObj.nbUsers =  wss.clients.size;
-  //   joinObj.id = uuidv4();
-
-  //   wss.clients.forEach(function each(client){
-  //     client.send(JSON.stringify(joinObj));
-  //   })
-  // });
-
-
-
   // Set up a callback for when a client closes the socket. This usually means they closed their browser.
-  ws.on('close', () => console.log('Client disconnected'));
+  ws.on('close', () =>  {
+    console.log('Client disconnected')
+
+    connectedClientsObj.nbOfUsers = wss.clients.size;
+
+          wss.clients.forEach(function each(client){
+
+      client.send(JSON.stringify(connectedClientsObj));
+
+    })
+
+
+
+  }
+
+
+
+
+    );
+
+
 });
