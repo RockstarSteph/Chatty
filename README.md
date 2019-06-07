@@ -32,4 +32,4 @@ open http://localhost:3000
 
 ### Screenshots
 !['App's main page /chatroom'](./screenshots/AppMainPage.png)
-!['Chat messages and username change notifications'](./screenshots/chatmsgsAndusernameChange.png)
+!['Chat messages and username change notifications'](./screenshots/AppInAction.png)
