@@ -1,7 +1,7 @@
-ChattyApp aka Work or Chat?
+Chatty
 ============================
 
-A minimal chatroom app where users can see the number of online users in the chatroom, send each other messages and change their username and have their new username displayed to all connected users in the main chat window.
+A minimal chatroom app where users can see the number of online users in the chatroom, send each other messages and change their username. A user can also change their username which will trigger a status update to all connected users in the main chat window.
 
 
 
@@ -31,5 +31,5 @@ open http://localhost:3000
 
 
 ### Screenshots
-['App's main page /chatroom'](./screenshots/AppMainPage.png)
-['Chat messages and username change notifications'](./screenshots/chatmsgsAndusernameChange.png)
+!['App's main page /chatroom'](./screenshots/AppMainPage.png)
+!['Chat messages and username change notifications'](./screenshots/chatmsgsAndusernameChange.png)
